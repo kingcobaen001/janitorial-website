@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fixers Janitorial Services</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #003087; /* Royal Blue */
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {width: 190px;
+            height: auto;
+            position: relative;
+
+           
+            
+            
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #6a1b9a; /* Purple */
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('') no-repeat center center/cover;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 48, 135, 0.6); /* Royal Blue overlay */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background-color: #6a1b9a; /* Purple */
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #4a0072; /* Darker Purple */
+            transform: scale(1.05);
+        }
+
+        /* Services Section */
+        .services {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 40px;
+            color: #003087; /* Royal Blue */
+            margin-bottom: 50px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: rgb(250, 249, 249);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+     /* Main container styling */
+.main-container {
+    display: -webkit-inline-box;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    max-width: 200px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+}
+
+/* Inner container (service card) styling */
+.service-card {
+    text-align: center;
+    padding: 90px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    box-shadow: 0 23px 50px rgba(0, 0, 0, 0.1);
+    width: 90%;
+}
+
+/* Shared icon styling */
+.service-card img.service-icon {
+    width: 2cm; /* Relative to the parent container */
+    height: 3px; 
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Styling for h2 and p tags */
+.service-card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #666;
+}
+}
+}
+        }
+
+        .service-card h3 {
+            margin: 20px 0;
+            font-size: 26px;
+            color: #003087; /* Royal Blue */
+        }
+
+        .service-card p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* About Section */
+        .about {
+            background-color: #6a1b9a; /* Purple */
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* Contact Section */
+        .contact {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .contact h2 {
+            text-align: center;
+            font-size: 40px;
+            color: #003087; /* Royal Blue */
+            margin-bottom: 50px;
+        }
+
+        form {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #003087; /* Royal Blue */
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        form button {
+            background-color: #6a1b9a; /* Purple */
+            color: white;
+            padding: 15px;
+            border: none;
+            width: 100%;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #4a0072; /* Darker Purple */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #003087; /* Royal Blue */
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 80px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .services h2, .about h2, .contact h2 {
+                font-size: 32px;
+            }
+
+            form {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                height: 400px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .cta-button {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+           <div class="brand-container">
+  <img src="images/logo.png" alt="Brand Logo" class="logo">
+</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Transform Your Space with The Fixers</h1>
+            <p>Expert janitorial services delivering spotless results with a touch of professionalism and care.</p>
+            <a href="#contact" class="cta-button">Request a Quote</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Cleaning Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                  <img src="images/smart.png" alt="office cleaning" class="logo">
+                <h3>Office Cleaning</h3>
+                <p>Create a pristine work environment with our comprehensive office cleaning, including desks, floors, and common areas.</p>
+            </div>
+            <div class="service-card">
+                <img src="images/home.png" alt="Commercial Cleaning" class="logo">
+                <h3>Commercial Cleaning</h3>
+                <p>Customized cleaning solutions for retail, restaurants, and other commercial spaces to ensure a welcoming atmosphere.</p>
+            </div>
+            <div class="service-card">
+                <img src="images/vacuum-cleaner-.png" alt="Deep Cleaning" class="logo">
+                <h3>Deep Cleaning</h3>
+                <p>Thorough cleaning for high-traffic areas, tackling dirt and grime in every corner for a refreshed space.</p>
+            </div>
+            <div class="service-card">
+                <img src="images/plumbing-inspection.png" alt="plumbing service" class="logo">
+                <h3>plumbing service</h3>
+                <p>Eco-friendly fast and reliable .</p>
+            </div>
+        </div>
+         <div class="service-card">
+                <img src="images/generator.png" alt="other services" class="logo">
+                <h3>Solar & electrical</h3>
+                <p>solar & eletrical services, building a brighter solar and eletrical future.</p>
+            </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About The Fixers</h2>
+        <p>At The Fixers, we bring over a decade of expertise to janitorial services, delivering exceptional cleanliness with a commitment to quality. Our trained professionals use eco-friendly products and advanced techniques to meet your needs.</p>
+        <p>From small offices to large commercial spaces, we provide tailored solutions with a focus on reliability and customer satisfaction.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone (Optional):</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit">Submit Inquiry</button>
+        </form>
+    </section>
+
+     <section id="contact" class="contact">
+        <h2>contact us on </h2>
+         <p>08126427656, 07072119537</p>
+         <p>https://linktr.ee/kingcobaen</p>
+
+    <footer>
+        <p>&copy; 2025 The Fixers Janitorial Services. All rights reserved.</p>
+    </footer>
+</body>
+</html>
